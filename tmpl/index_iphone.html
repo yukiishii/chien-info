@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>遅延なう</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    {% include 'meta.html' %}
+  </head>
+  <body>
+    <center><h1><font size="+8">"遅延なう"</font><font size="+1"><br />へようこそ!!</font></h1></center>
+
+    <div id="main_iphone">
+    {% for param in params %}
+    <div id="item_iphone">
+      <span class="buddy_iphone"><img src="{{ param.img }}" align="left" />
+      <span class="name_iphone"><a href="{{ param.uri }}" target="_blank">{{ param.name }}</a></span><br />
+      </span><span class="time_iphone">{{ param.time }}</span><br />
+      <span class="coment_iphone">{{ param.content }}</span>
+      <br clear="left" />
+      
+    </div>
+    {% endfor %}
+    </div>
+    {% include 'ads_iphone.html' %}
+    <div id="main_iphone">
+      <h2>JR東日本</h2>
+      <span class="page"><a href="/page/東海道線">東海道線</a></span>
+      <span class="page"><a href="/page/山手線">山手線</a></span>
+      <span class="page"><a href="/page/中央線">中央線</a></span>
+      <span class="page"><a href="/page/京浜東北線">京浜東北線</a></span>
+      <span class="page"><a href="/page/横須賀線">横須賀線</a></span>
+      <span class="page"><a href="/page/根岸線">根岸線</a></span>
+      <span class="page"><a href="/page/南部線">南部線</a></span>
+      <span class="page"><a href="/page/京葉線">京葉線</a></span>
+      <span class="page"><a href="/page/埼京線">埼京線</a></span>
+      <span class="page"><a href="/page/総武線">総武線</a></span>
+      <h2>東急</h2>
+      <span class="page"><a href="/page/東横線">東急東横線</a></span>
+      <span class="page"><a href="/page/大井町線">東急大井町</a></span>
+      <span class="page"><a href="/page/田園都市線">東急田園都市線</a></span>
+      <span class="page"><a href="/page/目黒線">東急目黒線</a></span>
+      <h2>東京メトロ</h2>
+      <span class="page"><a href="/page/銀座線">銀座線</a></span>
+      <span class="page"><a href="/page/丸ノ内線">丸ノ内線</a></span>
+      <span class="page"><a href="/page/日比谷線">日比谷線</a></span>
+      <span class="page"><a href="/page/有楽町線">有楽町線</a></span>
+      <span class="page"><a href="/page/千代田線">千代田線</a></span>
+      <span class="page"><a href="/page/半蔵門線">半蔵門線</a></span>
+      <h2>京急</h2>
+      <span class="page"><a href="/page/京急">京急本線</a></span>
+      <span class="page"><a href="/page/京急大師線">京急大師線</a></span>
+      <h2>小田急</h2>
+      <span class="page"><a href="/page/小田急線">小田急線</a></span>
+      <span class="page"><a href="/page/小田原線">小田急小田原線</a></span>
+      <span class="page"><a href="/page/多摩線">小田急多摩線</a></span>
+      <span class="page"><a href="/page/江ノ島線">小田急江ノ島線</a></span>
+    </div>
+    <div id="main_iphone">
+      iPhoneアプリ | <a href="http://mixi.jp/view_appli.pl?id=15544">mixiアプリ</a>
+    </div>
+    {% include 'footer_iphone.html' %}
+  </body>
+{% include 'analytics.html' %}
+</html>

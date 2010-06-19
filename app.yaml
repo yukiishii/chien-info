@@ -1,0 +1,18 @@
+application: chien-info
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /favicon.ico
+  static_files: img/favicon.ico
+  upload: img/favicon.ico
+
+- url: /img
+  static_dir: img
+
+- url: .*
+  script: main.py

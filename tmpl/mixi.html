@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="遅延なう">
+    <Require feature="opensocial-0.8" />
+  </ModulePrefs>
+  <Content view="home">
+    <![CDATA[
+    <link href="http://chien-info.appspot.com/css/mixi.css" rel="stylesheet" type="text/css">
+    {% for param in params %}
+    <div id="item_home">
+      <span class="buddy_home"><img src="{{ param.img }}" align="left" /></span>
+      <span class="name"><a href="javascript:void(0);" onClick="javascript:mixi.util.requestExternalNavigateTo('{{ param.uri }}');">{{ param.name }}</a></span><br />
+      <span class="time">{{ param.time }}</span><br clear="left" />
+      <span class="coment">{{ param.content }}</span><br />
+    </div>
+    {% endfor %}
+    ]]>
+  </Content>
+  <Content view="canvas">
+    <![CDATA[
+    <link href="http://chien-info.appspot.com/css/mixi.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript">  
+      function invite() {  
+      opensocial.requestShareApp(opensocial.IdSpec.PersonId.VIEWER, null, function(response) {  
+      });
+      }
+    </script>
+      <center><input type="button" name="invite" value="このアプリを友達に紹介する" onClick="javascript:invite();"></center>
+    {% for param in params %}
+    <div id="item">
+      <span class="buddy"><img src="{{ param.img }}" align="left" /></span>
+      <span class="name"><a href="javascript:void(0);" onClick="javascript:mixi.util.requestExternalNavigateTo('{{ param.uri }}');">{{ param.name }}</a></span>
+      <span class="coment">{{ param.content }}</span><br />
+      <span class="time">{{ param.time }}</span><br clear="left" />
+    </div>
+    {% endfor %}
+    ]]>
+  </Content>
+  <Content view="profile">
+    <![CDATA[
+    <link href="http://chien-info.appspot.com/css/mixi.css" rel="stylesheet" type="text/css">
+    {% for param in params %}
+    <div id="item_home">
+      <span class="buddy_home"><img src="{{ param.img }}" align="left" /></span>
+      <span class="name"><a href="javascript:void(0);" onClick="javascript:mixi.util.requestExternalNavigateTo('{{ param.uri }}');">{{ param.name }}</a></span><br />
+      <span class="time">{{ param.time }}</span><br clear="left" />
+      <span class="coment">{{ param.content }}</span><br />
+      
+    </div>
+    {% endfor %}
+    ]]>
+  </Content>
+</Module>

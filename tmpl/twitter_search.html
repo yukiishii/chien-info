@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>{{ name }}の遅延情報 - 遅延なう -</title>
+    {% include 'meta.html' %}
+  </head>
+  <body>
+    <center><h1>{{ name }}の遅延情報</h1></center>
+    <div id="main">
+    {% for param in params %}
+    <div id="item">
+      <span class="buddy"><img src="{{ param.img }}" align="left" /></span>
+      <div>
+      <span class="name"><a href="{{ param.uri }}" target="_blank">{{ param.name }}</a></span>
+      <span class="coment">{{ param.content }}</span><br />
+      <span class="time">{{ param.time }}</span><br clear="left" />
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+    {% include 'footer.html' %}
+  </body>
+{% include 'analytics.html' %}
+</html>
